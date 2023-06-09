@@ -1,0 +1,10 @@
+<div>
+  <img [src]="user.photo" alt="lego" />
+  <h1>Nom: {{ user.name }}</h1>
+  <h1>Prénom: {{ user.firstName }}</h1>
+  <h2 *ngIf="showAge">Age: {{ user.age }}</h2>
+  <h3>{{ user.quote }}</h3>
+  <h3>Changer la citation:</h3>
+  <input type="text" [(ngModel)]="user.quote" />
+  <button (click)="toggleAge()">Afficher/Masquer l'âge</button>
+</div>
